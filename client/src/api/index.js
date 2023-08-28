@@ -1,7 +1,7 @@
 import axios from "axios";
 import { BACKEND_URL } from "../BACKEND_URL";
-const API = axios.create({ baseURL:BACKEND_URL });
-// console.log(BACKEND_URL)
+const API = axios.create({ baseURL: BACKEND_URL });
+
 API.interceptors.request.use((req) => {
   console.log(localStorage.getItem("profile"));
   if (localStorage.getItem("profile")) {

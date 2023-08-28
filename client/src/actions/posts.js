@@ -6,7 +6,6 @@ import {
   LIKE,
   CREATE,
 } from "../constants/actionType";
-
 export const getPosts = () => async (dispatch) => {
   try {
     const { data } = await api.fetchPosts();
@@ -19,19 +18,16 @@ export const getPosts = () => async (dispatch) => {
   }
 };
 export const createPost = (posts) => async (dispatch) => {
-
   try {
     const { data } = await api.createPosts(posts);
 
     dispatch({
       type: CREATE,
       payload: data,
-    }
-    );
+    });
   } catch (error) {
     console.log(error.message);
   }
-  
 };
 export const updatePost = (currentId, posts) => async (dispatch) => {
   try {

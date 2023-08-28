@@ -58,7 +58,7 @@ const Auth = () => {
   };
   const googleSuccess = async (res) => {
     axios.post(`${BACKEND_URL}/user/logingoogle`, res).then((response) => {
-      // console.log(response);
+      console.log(response);
 
       if (!response.data) {
         window.location.replace(FRONTEND_URL + "/auth");
