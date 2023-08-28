@@ -85,7 +85,7 @@ export const googleLogin = async (request, res) => {
         res.status(200).json({ result: result1, token });
       })
       .catch((error) => {
-        response.send(error);
+        res.send(error);
       });
   }
 };
